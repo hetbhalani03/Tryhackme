@@ -1,0 +1,296 @@
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0e1525;
+  color: white;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #131c2c;
+  padding: 20px 5%;
+  height: 80px;
+  max-width: 1600px;
+  margin: 0 auto;
+  width: 100%;
+
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.logo img {
+  height: 55px;
+}
+
+.nav-center {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-center li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-center a {
+  color: #bfcfec;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.nav-center a:hover {
+  color: #88c949;
+  background: rgba(136, 201, 73, 0.1);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.search-icon-container {
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.search-icon-container:hover {
+  background: rgba(168, 178, 195, 0.1);
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+  fill: #a8b2c3;
+}
+
+.navbar-right .login {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.navbar-right .login:hover {
+  color: #88c949;
+  background: rgba(136, 201, 73, 0.1);
+}
+
+.navbar-right .signup {
+  background: #88c949;
+  padding: 12px 24px;
+  border-radius: 6px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar-right .signup:hover {
+  background: #7ab83f;
+  transform: translateY(-1px);
+}
+
+
+.nav-center {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-center li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-center a {
+  color: #bfcfec;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-center a.active {
+  color: #88c949;
+  background: rgba(136, 201, 73, 0.15);
+}
+
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  fill: #bfcfec;
+}
+
+.nav-center a:hover .nav-icon {
+  fill: #88c949;
+}
+
+
+/* Add these media queries to the end of your navbar.css file */
+
+/* Tablet and smaller desktops */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 3%;
+  }
+  
+  .nav-center {
+    gap: 4px;
+  }
+  
+  .nav-center a {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  
+  .nav-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 4%;
+    height: 70px;
+  }
+  
+  .logo img {
+    height: 45px;
+  }
+  
+  .nav-center {
+    gap: 2px;
+  }
+  
+  .nav-center a {
+    padding: 6px 8px;
+    font-size: 11px;
+  }
+  
+  .navbar-right {
+    gap: 16px;
+  }
+  
+  .navbar-right .signup {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+  
+  .navbar-right .login {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 640px) {
+  .navbar {
+    padding: 10px 3%;
+    height: 65px;
+  }
+  
+  .nav-center a span {
+    display: none; /* Hide text, keep only icons */
+  }
+  
+  .nav-center a {
+    padding: 8px 6px;
+  }
+  
+  .navbar-right {
+    gap: 12px;
+  }
+  
+  .search-icon-container {
+    display: none; /* Hide search on mobile */
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 2%;
+    height: 60px;
+    flex-wrap: wrap;
+  }
+  
+  .logo img {
+    height: 35px;
+  }
+  
+  .nav-center {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
+    gap: 0;
+  }
+  
+  .nav-center a {
+    padding: 4px;
+    flex: 1;
+    max-width: 60px;
+  }
+  
+  .navbar-right .login {
+    display: none; /* Hide login on very small screens */
+  }
+  
+  .navbar-right .signup {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .navbar {
+    height: auto;
+    min-height: 60px;
+  }
+  
+  .logo img {
+    height: 30px;
+  }
+  
+  .nav-center {
+    margin-top: 8px;
+  }
+  
+  .navbar-right .signup {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+}
+
